@@ -32,7 +32,7 @@ lint-flake8:  ## flake8: linter
 
 .PHONY: lint-mypy
 lint-mypy:  ## mypy: static type checker
-	@mypy ./src
+	@mypy .
 
 .PHONY: lint-mypy-report
 lint-mypy-report: ## mypy: static type checker with html report
@@ -40,3 +40,24 @@ lint-mypy-report: ## mypy: static type checker with html report
 
 .PHONY: lint
 lint: lint-black lint-isort lint-flake8 lint-mypy ## Runs all linting commands
+
+##@ Testing
+
+.PHONY: unit-tests
+unit-tests:  ## Runs unit tests
+	@pytest
+
+.PHONY: unit-tests-cov
+unit-tests-cov:  ## Runs unit tests with verbose output
+	@pytest --cov=src --cov-report term-missing --cov-report html
+
+.PHONY: unit-tests-cov-fail
+unit-tests-cov-fail:  ## Runs unit tests with verbose output and fail on coverage
+	@pytest --cov=src --cov-report term-missing --cov-report html --cov-fail-under=80 --junitxml=pytest.xml | tee pytest-coverage.txt
+
+.PHONY: clean-cov
+clean-cov:  ## Cleans up coverage files
+	@rm -rf .coverage
+	@rm -rf htmlcov
+	@rm -rf pytest.xml
+	@rm -rf pytest-coverage.txt

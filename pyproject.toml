@@ -1,9 +1,10 @@
 [tool.poetry]
 name = "python_app_template"
-version = "0.1.0"
+version = "0.2.0"
 description = ""
 authors = ["Tom Harrison <tomharrisonjr@gmail.com>"]
 readme = "README.md"
+
 
 [tool.poetry.dependencies]
 python = "^3.12.1"
@@ -15,16 +16,29 @@ uvicorn = {extras = ["standard"], version = "^0.25.0"}
 
 [tool.poetry.group.test.dependencies]
 pytest = "^7.4.4"
+pytest-sugar = "^0.9.7"
+respx = "^0.20.2"
+pytest-asyncio = "^0.23.3"
+trio = "^0.23.2"
+pytest-cov = "^4.1.0"
 
+[tool.coverage.report]
+exclude_lines = [
+    "if __name__ == .__main__.:",
+    "def __repr__",
+    "def __str__",
+    "raise NotImplementedError",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider" # deactivate pytest caching
 
 [tool.poetry.group.lint.dependencies]
 flake8 = "^6.1.0"
 black = "^23.12.1"
 isort = "^5.13.2"
 mypy = "^1.4.0"
-
-[tool.isort]
-profile = "black"
 
 [tool.mypy]
 # 3rd party import
@@ -50,6 +64,9 @@ warn_return_any = false
 warn_unreachable = true
 # Misc
 pretty = true
+
+[tool.isort]
+profile = "black"
 
 [build-system]
 requires = ["poetry-core"]
