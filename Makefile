@@ -53,7 +53,7 @@ unit-tests-cov:  ## Runs unit tests with verbose output
 
 .PHONY: unit-tests-cov-fail
 unit-tests-cov-fail:  ## Runs unit tests with verbose output and fail on coverage
-	@pytest --cov=src --cov-report term-missing --cov-report html --cov-fail-under=80  --junitxml=pytest.xml | tee pytest-coverage.txt
+	@pytest --cov=src --cov-report term-missing --cov-report html --cov-fail-under=80 --junitxml=pytest.xml | tee pytest-coverage.txt
 
 .PHONY: clean-cov
 clean-cov:  ## Cleans up coverage files

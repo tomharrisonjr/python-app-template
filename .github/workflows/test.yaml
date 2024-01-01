@@ -10,6 +10,8 @@ on:
 jobs:
   Testing:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       # check out repo
       - name: Checkout repository
