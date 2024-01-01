@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "python-app-template"
+name = "python_app_template"
 version = "0.1.0"
 description = ""
 authors = ["Tom Harrison <tomharrisonjr@gmail.com>"]
