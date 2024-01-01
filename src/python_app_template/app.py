@@ -6,7 +6,7 @@ from httpx import Response
 from python_app_template import __version__
 
 # app
-app = FastAPI = FastAPI(
+app: FastAPI = FastAPI(
     title="FastAPI",
     description="A FastAPI template for python applications",
     version=__version__,
