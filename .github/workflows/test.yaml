@@ -17,10 +17,8 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
       # install poetry
-      - name: In  stall poetry
+      - name: Install poetry
         run: pipx install poetry==${{ vars.POETRY_VERSION }}
-        with:
-          python-version: ${{ vars.PYTHON_VERSION }}
       # set up python with cache
       - name: Setup python ${{ vars.PYTHON_VERSION }}
         uses: actions/setup-python@v4
