@@ -13,6 +13,7 @@ jobs:
    Linting:
      runs-on: ubuntu-latest
      steps:
+       # checkout repo
        - name: Checkout repository
          uses: actions/checkout@v3
          with:
@@ -26,8 +27,9 @@ jobs:
          with:
            python-version: '3.12'
            cache: 'poetry'
+       # Install requirements (including dev-dependencies)
        - name: Install requirements
-         run: poetry install --only lint
+         run: poetry install --with lint
        - name: Run linters
          run: |
            set -o pipefail
