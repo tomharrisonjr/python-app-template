@@ -1,21 +1,55 @@
-######################################################################
-## NOTE: THIS FILE SHOULD BE REPLACED BY RUNNING ./script/bootstrap ##
-######################################################################
-
 [tool.poetry]
-name = "python-template"
-version = "1.0.2"
+name = "python_app_template"
+version = "0.1.0"
 description = ""
-authors = ["Armand Sauzay <sauzayarmand@gmail.com>"]
+authors = ["Tom Harrison <tomharrisonjr@gmail.com>"]
 readme = "README.md"
-packages = [{include = "python_template"}]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.12.1"
+requests = "^2.31.0"
+httpx = "^0.26.0"
+fastapi = "^0.108.0"
+uvicorn = {extras = ["standard"], version = "^0.25.0"}
 
 
 [tool.poetry.group.test.dependencies]
-pytest = "^7.3.1"
+pytest = "^7.4.4"
+
+
+[tool.poetry.group.lint.dependencies]
+flake8 = "^6.1.0"
+black = "^23.12.1"
+isort = "^5.13.2"
+mypy = "^1.4.0"
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+# 3rd party import
+ignore_missing_imports = true
+# dynamic typing
+disallow_any_unimported = true
+disallow_any_expr = false
+disallow_any_decorated = false
+disallow_any_explicit = true
+disallow_any_generics = false
+disallow_subclassing_any = true
+# platform
+python_version = "3.12"
+# untyped
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_decorators = true
+# None and Optional
+no_implicit_optional = true
+# Warnings
+warn_return_any = false
+warn_unreachable = true
+# Misc
+pretty = true
 
 [build-system]
 requires = ["poetry-core"]
