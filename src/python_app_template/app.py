@@ -9,8 +9,15 @@ app = FastAPI = FastAPI()
 
 @app.get(path="/{number}", status_code=status.HTTP_200_OK)
 def get_pokemon(
-        number: int = Path(title="The Pokemon to get (based on number)", ge=1, le=151)
+    number: int = Path(title="The Pokemon to get (based on number)", ge=1, le=151)
 ) -> dict:
+    """
+    Endpoint that returns information about pokemon.
+    Args:
+        number: The id of the pokemon to get
+    Returns:
+        Awesome information about the pokemon
+    """
     pokemon_url: str = f"https://pokeapi.co/api/v2/pokemon/{number}"
 
     try:
