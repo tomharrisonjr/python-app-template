@@ -1,0 +1,50 @@
+---
+name: Testing
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  POETRY_VERSION: 1.7.1
+  PYTHON_VERSION: 3.12
+
+jobs:
+  Testing:
+    runs-on: ubuntu-latest
+    steps:
+      # check out repo
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+      # install poetry
+      - name: Install poetry
+        run: pipx install poetry==${{ env.POETRY_VERSION }}
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      # set up python with cache
+      - name: Setup python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'poetry'
+      # Install requirements (including dev-dependencies)
+      - name: Install requirements
+        run: poetry install --with test
+      # Run unit-tests
+      - name: Run unit-tests
+        run: |
+          set -o pipefail
+          poetry run make unit-tests-cov-fail
+      # Add pytest coverage report to PR
+      - name: Pytest coverage comment
+        if: ${{ success() && github.event_name == 'pull_request' }}
+        id: coverageComment
+        uses: MishaKav/pytest-coverage-comment@main
+        with:
+           title: Coverage Report
+           pytest-coverage-path: pytest-coverage.txt
+           junitxml-path: pytest.xml

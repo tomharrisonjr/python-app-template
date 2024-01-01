@@ -3,11 +3,13 @@ name: Linting
 
 on:
   pull_request:
-    branches:
-      - main
+    branches: [ main ]
   push:
-    branches:
-      - main
+    branches: [ main ]
+
+env:
+  POETRY_VERSION: 1.7.1
+  PYTHON_VERSION: 3.12
 
 jobs:
    Linting:
@@ -20,12 +22,12 @@ jobs:
            ref: ${{ github.head_ref }}
        # install poetry
        - name: Install poetry
-         run: pipx install poetry==1.7.1
+         run: pipx install poetry==${{ env.POETRY_VERSION }}
          # set up python with cache
-       - name: Setup python 3.12
+       - name: Setup python ${{ env.PYTHON_VERSION }}
          uses: actions/setup-python@v4
          with:
-           python-version: '3.12'
+           python-version: '${{ env.PYTHON_VERSION }}'
            cache: 'poetry'
        # Install requirements (including dev-dependencies)
        - name: Install requirements
