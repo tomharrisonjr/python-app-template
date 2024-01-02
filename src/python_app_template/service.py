@@ -1,5 +1,11 @@
 """
 Provides several sample functions for testing the docstrings
+
+The module contains the following functions:
+
+- `foo(a,b)`: Returns two numbers added together (int.
+- `bar(name)`: Returns a greeting (str).
+
 """
 
 

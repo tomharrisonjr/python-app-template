@@ -14,10 +14,9 @@ theme:
 plugins:
 - search
 - mkdocstrings:
-    - handlers:
-        python:
-          paths:
-            - src
+    handlers:
+      python:
+        paths: [ src ]
 
 nav: []
 
