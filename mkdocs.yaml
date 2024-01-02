@@ -1,0 +1,10 @@
+site_name: Python App Template
+
+docs_dir: docs
+
+theme:
+  name: material
+
+nav: []
+
+use_directory_urls: false
