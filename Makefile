@@ -45,15 +45,15 @@ lint: lint-black lint-isort lint-flake8 lint-mypy ## Runs all linting commands
 
 .PHONY: unit-tests
 unit-tests:  ## Runs unit tests
-	@pytest
+	@pytest --doctest-modules
 
 .PHONY: unit-tests-cov
 unit-tests-cov:  ## Runs unit tests with verbose output
-	@pytest --cov=src --cov-report term-missing --cov-report html
+	@pytest --doctest-modules --cache-clear --cov=src --cov-report term-missing --cov-report html --junitxml=pytest.xml | tee pytest-coverage.txt
 
 .PHONY: unit-tests-cov-fail
 unit-tests-cov-fail:  ## Runs unit tests with verbose output and fail on coverage
-	@pytest --cov=src --cov-report term-missing --cov-report html --cov-fail-under=80 --junitxml=pytest.xml | tee pytest-coverage.txt
+	@pytest --cov-fail-under=80 --doctest-modules --cache-clear --cov=src --cov-report term-missing --cov-report html --junitxml=pytest.xml | tee pytest-coverage.txt
 
 .PHONY: clean-cov
 clean-cov:  ## Cleans up coverage files

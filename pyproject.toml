@@ -31,12 +31,15 @@ exclude_lines = [
 ]
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+testpaths = ["src", "tests"]
 addopts = "-p no:cacheprovider" # deactivate pytest caching
+
 
 [tool.poetry.group.docs.dependencies]
 mkdocs = "^1.5.3"
 mkdocs-material = "^9.5.3"
+mkdocstrings = {extras = ["python"], version = "^0.24.0"}
+
 
 [tool.poetry.group.lint.dependencies]
 flake8 = "^6.1.0"
