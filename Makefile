@@ -75,3 +75,5 @@ docs-deploy: ## build & deploy documentation to "gh-pages" branch
 .PHONY: clean-docs
 clean-docs: ## remove output files from mkdocs
 	@rm -rf site
+
+clean: clean-cov clean-docs ## Cleans up all generated files
