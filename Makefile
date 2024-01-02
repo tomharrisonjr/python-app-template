@@ -61,3 +61,17 @@ clean-cov:  ## Cleans up coverage files
 	@rm -rf htmlcov
 	@rm -rf pytest.xml
 	@rm -rf pytest-coverage.txt
+
+##@ Documentation
+
+.PHONY: docs-build
+docs-build: ## build documentation locally
+	@mkdocs build
+
+.PHONY: docs-deploy
+docs-deploy: ## build & deploy documentation to "gh-pages" branch
+	@mkdocs gh-deploy -m "docs: update documentation" -v --force
+
+.PHONY: clean-docs
+clean-docs: ## remove output files from mkdocs
+	@rm -rf site
