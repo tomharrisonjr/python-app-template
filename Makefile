@@ -63,6 +63,7 @@ clean-cov:  ## Cleans up coverage files
 	@rm -rf pytest-coverage.txt
 
 ##@ Documentation
+
 .PHONY: docs-build
 docs-build: ## build documentation locally
 	@mkdocs build
@@ -73,4 +74,4 @@ docs-deploy: ## build & deploy documentation to "gh-pages" branch
 
 .PHONY: clean-docs
 clean-docs: ## remove output files from mkdocs
-   @rm -rf site
+	@rm -rf site
