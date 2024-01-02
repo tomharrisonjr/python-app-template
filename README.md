@@ -1,5 +1,6 @@
 [![Linting](https://github.com/tomharrisonjr/python-app-template/actions/workflows/lint.yaml/badge.svg)](https://github.com/tomharrisonjr/python-app-template/actions/workflows/lint.yaml)
 [![Testing](https://github.com/tomharrisonjr/python-app-template/actions/workflows/test.yaml/badge.svg)](https://github.com/tomharrisonjr/python-app-template/actions/workflows/test.yaml)
+[![Deploy Documentation](https://github.com/tomharrisonjr/python-app-template/actions/workflows/pages.yaml/badge.svg)](https://github.com/tomharrisonjr/python-app-template/actions/workflows/pages.yaml)
 
 # Python Application Template
 
