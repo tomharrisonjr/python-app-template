@@ -65,11 +65,11 @@ clean-cov:  ## Cleans up coverage files
 ##@ Documentation
 .PHONY: docs-build
 docs-build: ## build documentation locally
-   @mkdocs build
+	@mkdocs build
 
 .PHONY: docs-deploy
 docs-deploy: ## build & deploy documentation to "gh-pages" branch
-   @mkdocs gh-deploy -m "docs: update documentation" -v --force
+	@mkdocs gh-deploy -m "docs: update documentation" -v --force
 
 .PHONY: clean-docs
 clean-docs: ## remove output files from mkdocs
