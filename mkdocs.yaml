@@ -12,12 +12,12 @@ theme:
     - navigation.instant
 
 plugins:
-  - search
-  - mkdocstrings:
-      - handlers:
-          python:
-            paths:
-              - src
+- search
+- mkdocstrings:
+    - handlers:
+        python:
+          paths:
+            - src
 
 nav: []
 
