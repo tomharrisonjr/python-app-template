@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "python_app_template"
-version = "0.2.0"
+version = "0.1.0"
 description = ""
 authors = ["Tom Harrison <tomharrisonjr@gmail.com>"]
 readme = "README.md"
@@ -35,18 +35,19 @@ addopts = "-p no:cacheprovider" # deactivate pytest caching
 
 
 
+
 [tool.poetry.group.docs.dependencies]
 mkdocs = "^1.5.3"
 mkdocs-material = "^9.5.3"
 mkdocstrings = {extras = ["python"], version = "^0.24.0"}
 
+
 [tool.poetry.group.semver.dependencies]
 python-semantic-release = "^8.7.0"
 
 [tool.semantic_release]
-branch = "main"
-version_variable = "src/python_app_template/__init__.py:__version__"
-version_toml = "pyproject.toml:tool.poetry.version"
+version_variable = ["src/python_app_template/__init__.py:__version__"]
+version_toml = ["pyproject.toml:tool.poetry.version"]
 version_source = "tag"
 commit_message = "{version} [skip ci]" # skip ci pipeline for version bumps
 commit_version_number = true
@@ -54,6 +55,19 @@ tag_commit = true
 upload_to_pypi = false
 upload_to_release = false
 hvcs = "github"
+
+[tool.semantic_release.branches.main]
+match = "main"
+prerelease = false
+
+[tool.semantic_release.branches.minor]
+match = "feat/*"
+prerelease = false
+
+[tool.semantic_release.branches.patch]
+match = "fix/*"
+prerelease = false
+
 
 [tool.poetry.group.lint.dependencies]
 flake8 = "^6.1.0"
