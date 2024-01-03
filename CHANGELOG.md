@@ -2,7 +2,14 @@
 
 
 
-## v0.2.0 (2024-01-02)
+## v0.3.0 (2024-01-02)
+
+### Feature
+
+* feat: new ver ([`843d219`](https://github.com/tomharrisonjr/python-app-template/commit/843d219afba6f2b3b5617e2dc34961d316ce521f))
+
+
+## v0.2.0 (2024-01-03)
 
 ### Feature
 

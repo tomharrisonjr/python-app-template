@@ -78,12 +78,12 @@ clean-docs: ## remove output files from mkdocs
 
 clean: clean-cov clean-docs ## Cleans up all generated files
 
-##@ Release versions
+##@ Releases
 
-current-release: ## returns the current version
-	@semantic-release version --print
+current-version: ## returns the current version
+	@semantic-release print-version --current
 
-next-release: ## returns the next version
+next-version: ## returns the next version
 	@semantic-release print-version --next
 
 current-changelog: ## returns the current changelog
@@ -92,5 +92,5 @@ current-changelog: ## returns the current changelog
 next-changelog: ## returns the next changelog
 	@semantic-release changelog --unreleased
 
-publish-noop: ## publish command (no-operation mode)
+publish-noop: ## publish command (noop="no operation mode")
 	@semantic-release publish --noop
