@@ -2,7 +2,14 @@
 
 
 
-## v0.1.0 (2024-01-02)
+## v0.2.0 (2024-01-02)
+
+### Feature
+
+* feat: new ver ([`a57ab22`](https://github.com/tomharrisonjr/python-app-template/commit/a57ab2239dc13e8fd89747b35028477d0f779b16))
+
+
+## v0.1.0 (2024-01-03)
 
 ### Feature
 
