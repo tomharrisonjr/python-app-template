@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "python_app_template"
-version = "0.2.0"
+version = "0.3.0"
 description = ""
 authors = ["Tom Harrison <tomharrisonjr@gmail.com>"]
 readme = "README.md"
@@ -37,10 +37,12 @@ addopts = "-p no:cacheprovider" # deactivate pytest caching
 
 
 
+
 [tool.poetry.group.docs.dependencies]
 mkdocs = "^1.5.3"
 mkdocs-material = "^9.5.3"
 mkdocstrings = {extras = ["python"], version = "^0.24.0"}
+
 
 
 
@@ -69,6 +71,7 @@ prerelease = false
 [tool.semantic_release.branches.patch]
 match = "fix/*"
 prerelease = false
+
 
 
 
