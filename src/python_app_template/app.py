@@ -9,7 +9,7 @@ from python_app_template import __version__
 app: FastAPI = FastAPI(
     title="FastAPI",
     description="A FastAPI template for python applications",
-    version=__version__,
+    version=__version__
 )
 
 
@@ -41,4 +41,6 @@ def get_pokemon(
 
 
 if __name__ == "__main__":
-    uvicorn.run(app="app:app", host="127.0.0.1", port=9000, reload=True)
+    uvicorn.run(app="app:app", host="localhost", port=9000, reload=True)
+
+
