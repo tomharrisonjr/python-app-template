@@ -3,7 +3,7 @@ import uvicorn
 from fastapi import FastAPI, HTTPException, Path, status
 from httpx import Response
 
-from python_app_template import __version__
+from . import __version__
 
 # app
 app: FastAPI = FastAPI(
