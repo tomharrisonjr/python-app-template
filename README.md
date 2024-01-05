@@ -2,6 +2,7 @@
 [![Testing](https://github.com/tomharrisonjr/python-app-template/actions/workflows/test.yaml/badge.svg)](https://github.com/tomharrisonjr/python-app-template/actions/workflows/test.yaml)
 [![Deploy Documentation](https://github.com/tomharrisonjr/python-app-template/actions/workflows/pages.yaml/badge.svg)](https://github.com/tomharrisonjr/python-app-template/actions/workflows/pages.yaml)
 [![Build](https://github.com/tomharrisonjr/python-app-template/actions/workflows/build.yaml/badge.svg)](https://github.com/tomharrisonjr/python-app-template/actions/workflows/build.yaml)
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
 # Python Application Template
 
