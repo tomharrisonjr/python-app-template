@@ -2,6 +2,21 @@
 
 
 
+## v0.6.0 (2024-01-04)
+
+### Documentation
+
+* docs: add semver badge ([`0dd0ba8`](https://github.com/tomharrisonjr/python-app-template/commit/0dd0ba8fa9b0831d3c459f8dbc7798832dd014a9))
+
+### Feature
+
+* feat: new version of python-semantic-release ([`e780f95`](https://github.com/tomharrisonjr/python-app-template/commit/e780f95c36c2dc1e10027cf8aa92646900182c2f))
+
+### Fix
+
+* fix: previous changelog ([`d116776`](https://github.com/tomharrisonjr/python-app-template/commit/d116776176f3bacc2ed01ed82d622b2236072066))
+
+
 ## v0.5.1 (2024-01-05)
 
 ### Fix
