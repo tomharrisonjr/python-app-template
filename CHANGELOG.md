@@ -1,12 +1,22 @@
 # CHANGELOG
 
 
-## Unreleased
+
+## v0.5.1 (2024-01-04)
+
+### Fix
+
+* fix: server-upgrade (#8) ([`edb1568`](https://github.com/tomharrisonjr/python-app-template/commit/edb1568dd22837bab6b9ba634a05ff79e727064d))
+
+* fix: formatting ([`8fe2193`](https://github.com/tomharrisonjr/python-app-template/commit/8fe2193dc1ebdc476bc3f94177e76bb099755d47))
+
+* fix: partial implementation of newer version of semver ([`b3c0fe8`](https://github.com/tomharrisonjr/python-app-template/commit/b3c0fe8a42d826956be52cf873160f620072eef6))
 
 ### Unknown
 
-* Build badge ([`f43c1a6`](https://github.com/tomharrisonjr/python-app-template/commit/f43c1a66be4a884f8ef0964ffebb0ce2ebf01ce2))
+* revert:  move version ([`b411e0a`](https://github.com/tomharrisonjr/python-app-template/commit/b411e0ae1a3bc1e30612aaf08feae4b61462ac8b))
 
+* Build badge ([`f43c1a6`](https://github.com/tomharrisonjr/python-app-template/commit/f43c1a66be4a884f8ef0964ffebb0ce2ebf01ce2))
 
 
 ## v0.5.0 (2024-01-04)
