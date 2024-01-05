@@ -80,17 +80,9 @@ clean: clean-cov clean-docs ## Cleans up all generated files
 
 ##@ Releases
 
-next-version: ## prints the version to be used as a tag for next release
-	@semantic-release --noop version --print
-
-make-changelog: ## returns the current changelog
-	@semantic-release changelog --released
-
-next-changelog: ## returns the next changelog
-	@semantic-release changelog --unreleased
-
-publish-noop: ## publish command (noop="no operation mode")
-	@semantic-release publish --noop
+.PHONY: release
+release:
+	@semantic-release version --changelog --tag --push --vcs-release --push
 
 ##@ Docker
 
