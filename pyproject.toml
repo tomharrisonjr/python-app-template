@@ -119,7 +119,7 @@ upload_to_vcs_release = true
 
 [tool.poetry.group.lint.dependencies]
 flake8 = "^6.1.0"
-black = "^23.12.1"
+black = "^24.3.0"
 isort = "^5.13.2"
 mypy = "^1.4.0"
 
